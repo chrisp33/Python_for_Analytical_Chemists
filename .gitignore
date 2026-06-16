@@ -32,6 +32,9 @@ pytest-cache-files-*/
 exports/
 **/exports/
 
+# --- Private content / production notes ---
+media/
+
 # --- Datasets ---
 # Large / external data is fetched via scripts/, not committed.
 data/raw/
