@@ -60,11 +60,10 @@ gives a checklist for judging whether a correction is scientifically honest.
 
 ## How to run
 
-From the repository root, once:
-
-```bash
-pip install -e ".[notebooks]"
-```
+First-time setup lives in the [root README](../../../README.md#setup): create
+and activate a `.venv`, then run `python -m pip install -e ".[notebooks]"`. When
+the notebook opens, select the `.venv` kernel — and **restart the kernel if you
+just installed the package** (see [Troubleshooting](../../../README.md#troubleshooting)).
 
 This also pulls in SciPy (for `scipy.sparse` / `spsolve`). Then open and run this
 notebook from this folder, top to bottom. It needs no external data — every
@@ -84,5 +83,4 @@ noise-free twin so the true baseline is known exactly. No external datasets.
 - Curriculum: [`docs/curriculum.md`](../../../docs/curriculum.md) → 3.3
 - Previous: [3.2 — Savitzky–Golay Smoothing and Derivatives](../3.2_savgol_smoothing_derivatives/)
 - Follow-up: [3.4 — Peak Detection and Picking](../3.4_peak_detection_and_picking/)
-- Media notes: [`media/3.3_asls_baseline_correction.md`](../../../media/3.3_asls_baseline_correction.md)
 - YouTube: _(add link when published)_

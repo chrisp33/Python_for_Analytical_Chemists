@@ -77,13 +77,12 @@ Closes with **Key Takeaways**, a **Practical Checklist**, **Common Mistakes**,
 
 ## How to run
 
-From the repository root, once:
+First-time setup lives in the [root README](../../../README.md#setup): create
+and activate a `.venv`, then run `python -m pip install -e ".[notebooks]"`. When
+the notebook opens, select the `.venv` kernel — and **restart the kernel if you
+just installed the package** (see [Troubleshooting](../../../README.md#troubleshooting)).
 
-```bash
-pip install -e ".[notebooks]"
-```
-
-Then open and run this notebook from this folder, top to bottom. It needs no
+Open and run this notebook from this folder, top to bottom. It needs no
 external data — the spectrum is generated from a fixed seed (`SEED = 11`), so your
 figures and printed numbers match the committed output. AsLS uses SciPy's sparse
 solver; no `scikit-learn` is required. The `exports/` folder it creates (PNG

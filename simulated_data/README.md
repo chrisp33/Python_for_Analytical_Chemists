@@ -11,7 +11,7 @@ Because the data is simulated, it carries its own ground truth. Every dataset re
 ## Install (development)
 
 ```bash
-pip install -e .
+python -m pip install -e .
 ```
 
 Dependencies: `numpy`, `scipy`, `pandas`.

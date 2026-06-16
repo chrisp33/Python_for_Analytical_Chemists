@@ -55,11 +55,10 @@ charge: amplified noise.
 
 ## How to run
 
-From the repository root, once:
-
-```bash
-pip install -e ".[notebooks]"
-```
+First-time setup lives in the [root README](../../../README.md#setup): create
+and activate a `.venv`, then run `python -m pip install -e ".[notebooks]"`. When
+the notebook opens, select the `.venv` kernel — and **restart the kernel if you
+just installed the package** (see [Troubleshooting](../../../README.md#troubleshooting)).
 
 This also pulls in SciPy (for `savgol_filter`). Then open and run this notebook
 from this folder, top to bottom. It needs no external data — every spectrum is
@@ -79,5 +78,4 @@ and noise-free, and a heavily-overlapping pair (`seed=3`, bands at 600 and
 - Curriculum: [`docs/curriculum.md`](../../../docs/curriculum.md) → 3.2
 - Previous: 3.1 — Noise, Signal, and What Smoothing Really Does *(planned)*
 - Follow-up: 3.3 — Baseline Correction Fundamentals
-- Media notes: [`media/3.2_savgol_smoothing_derivatives.md`](../../../media/3.2_savgol_smoothing_derivatives.md)
 - YouTube: _(add link when published)_

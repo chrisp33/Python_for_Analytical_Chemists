@@ -8,25 +8,136 @@ It is built for analytical chemists, lab scientists, grad students, and R&D scie
 
 ## Setup
 
-You need Python 3.9 or newer. From a terminal:
+You need Python 3.9 or newer and `git`. These steps create an isolated
+environment and install the lessons into it. You only do them once.
 
 ```bash
 # 1. Clone the repository
 git clone https://github.com/chrisp33/Python_for_Analytical_Chemists.git
 cd Python_for_Analytical_Chemists
 
-# 2. Create and activate a virtual environment
+# 2. Create a virtual environment
 python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
 
-# 3. Install the project with the notebook tools
-pip install -e ".[notebooks]"
+# 3. Activate it
+source .venv/bin/activate          # macOS / Linux
+# .venv\Scripts\activate           # Windows (Command Prompt)
+# .venv\Scripts\Activate.ps1       # Windows (PowerShell)
 
-# 4. Launch Jupyter
-jupyter lab                       # or: jupyter notebook
+# 4. Confirm you are using the environment's Python, not your system one
+which python                       # macOS / Linux — the path should end in /.venv/bin/python
+python -c "import sys; print(sys.executable)"   # works on every platform — should point inside .venv
+
+# 5. Install the project plus the notebook tools
+python -m pip install -e ".[notebooks]"
 ```
 
-The editable install (`-e`) puts the `simulated_data` package on your path, so every notebook can `from simulated_data import uvvis, nir, raman` no matter how deep it sits in the folder tree. The `[notebooks]` extra adds `matplotlib`, `jupyter`, and `ipykernel`.
+**What the editable install does.** The `-e` ("editable") flag puts the
+`simulated_data` package on your environment's path, so every notebook can
+`from simulated_data import uvvis, nir, raman` no matter how deep it sits in the
+folder tree — and any change to the package is picked up without reinstalling.
+The `[notebooks]` extra adds `matplotlib`, `jupyter`, and `ipykernel`.
+
+**Why `python -m pip` instead of `pip`?** It guarantees the install lands in the
+exact interpreter you verified in step 4, rather than some other Python that
+happens to be first on your PATH.
+
+**Verify it worked — a 5-second smoke test.** Still in the activated terminal,
+run:
+
+```bash
+python -c "from simulated_data import uvvis; print(uvvis.simulate(seed=0).X.shape)"
+```
+
+Successful output is exactly:
+
+```
+(1, 400)
+```
+
+That confirms the package is installed and importable. If you see this, any
+later "module not found" error is a *notebook kernel* issue, not an install
+issue — see [First notebook launch](#first-notebook-launch) and
+[Troubleshooting](#troubleshooting).
+
+## First notebook launch
+
+Installing the package is only half the job — your notebook also has to *run
+inside* the `.venv` you installed it into. Choosing that environment is a
+separate step from activating it in the terminal, and it's the most common
+first-run snag, so it's worth doing deliberately.
+
+**In VS Code (recommended):**
+
+1. Open the repository folder in VS Code.
+2. Open a notebook, for example `notebooks/02_scientific_computing/2.4_reading_instrument_files/`.
+3. Click the **kernel picker** at the top-right of the notebook.
+4. Choose **Python Environments…** and pick the one at `./.venv`. If it isn't
+   listed, open the Command Palette (`Ctrl/Cmd+Shift+P`), run
+   **Python: Select Interpreter**, and point it at `./.venv`.
+
+**In JupyterLab:** launch `jupyter lab` from the activated terminal, open a
+notebook, and it will use the active environment.
+
+**Verify the kernel from inside the notebook.** Run this in the first cell:
+
+```python
+import sys; print(sys.executable)
+```
+
+The path must contain `.venv`. If it doesn't, you have the wrong kernel selected
+— go back and pick the `.venv` one.
+
+> **Restart the kernel after installing.** If a notebook kernel was already
+> running when you installed the package, it will *not* see the new install
+> until it restarts. This is the single most common cause of
+> `ModuleNotFoundError: No module named 'simulated_data'`. Restart it:
+> in **VS Code**, the circular **Restart** button in the notebook toolbar;
+> in **JupyterLab**, **Kernel ▸ Restart Kernel**.
+
+## Troubleshooting
+
+**`ModuleNotFoundError: No module named 'simulated_data'`** — the notebook is
+running in a different Python than the one you installed into. Work through these
+in order:
+
+1. **Restart the kernel.** If you installed the package *after* the kernel
+   started, it won't be visible until you restart (VS Code: the Restart button;
+   JupyterLab: **Kernel ▸ Restart Kernel**). This fixes the most common case.
+2. **Check the kernel.** Run `import sys; print(sys.executable)` in a cell. The
+   path must contain `.venv`. If it doesn't, select the `.venv` kernel (see
+   [First notebook launch](#first-notebook-launch)).
+3. **Confirm the install is in that environment.** In the activated terminal:
+   ```bash
+   python -m pip show simulated_data
+   ```
+   If it reports nothing, re-run `python -m pip install -e ".[notebooks]"` with
+   the environment activated.
+
+**The `.venv` doesn't appear in the VS Code kernel picker** — open the Command
+Palette, run **Python: Select Interpreter**, and choose `./.venv` directly. If it
+still won't appear, register the environment as a named kernel (optional — only
+needed when VS Code can't auto-discover it):
+
+```bash
+python -m pip install ipykernel
+python -m ipykernel install --user --name pfac --display-name "Python (PFAC)"
+```
+
+Then reload the window (VS Code: **Developer: Reload Window**) and pick
+**"Python (PFAC)"**.
+
+**PowerShell won't activate the environment** (`running scripts is disabled`) —
+allow local scripts for your user, then activate again:
+
+```powershell
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+.venv\Scripts\Activate.ps1
+```
+
+**`pip` seems to install to the wrong place** — always use `python -m pip …`
+instead of bare `pip`. It binds the install to the interpreter you verified with
+`python -c "import sys; print(sys.executable)"`.
 
 ## Curriculum
 
@@ -48,7 +159,7 @@ The tracks are: Foundations, Scientific Computing, Signal Processing, Spectrosco
 Contributions are welcome. The simplest ways to help: open an issue for a bug, an unclear explanation, or a lesson idea; or open a pull request for a fix. If you change the `simulated_data` package, run the tests first:
 
 ```bash
-pip install -e ".[dev]"
+python -m pip install -e ".[dev]"
 pytest
 ```
 

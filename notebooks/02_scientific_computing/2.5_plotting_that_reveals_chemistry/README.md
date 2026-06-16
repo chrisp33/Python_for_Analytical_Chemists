@@ -49,13 +49,12 @@ question it now answers.
 
 ## How to run
 
-From the repository root, once:
+First-time setup lives in the [root README](../../../README.md#setup): create
+and activate a `.venv`, then run `python -m pip install -e ".[notebooks]"`. When
+the notebook opens, select the `.venv` kernel — and **restart the kernel if you
+just installed the package** (see [Troubleshooting](../../../README.md#troubleshooting)).
 
-```bash
-pip install -e ".[notebooks]"
-```
-
-Then open and run this notebook from this folder (top to bottom). It needs no
+Open and run this notebook from this folder (top to bottom). It needs no
 external data — every spectrum is generated from fixed random seeds, so your
 figures match the committed output exactly. The `exports/` folder it creates
 (300-dpi PNG + SVG) is regenerable scratch and is git-ignored.
@@ -72,5 +71,4 @@ and three "batches" (`seed=11/12/13`) where one carries a contaminant band near
 - Curriculum: [`docs/curriculum.md`](../../../docs/curriculum.md) → 2.5
 - Previous: 2.4 — Reading Real Instrument Files
 - Follow-up: 2.6 — Tidy Data and Reshaping Spectral Matrices
-- Media notes: [`media/2.5_plotting_that_reveals_chemistry.md`](../../../media/2.5_plotting_that_reveals_chemistry.md)
 - YouTube: _(add link when published)_

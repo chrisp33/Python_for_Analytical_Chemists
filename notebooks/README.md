@@ -12,12 +12,16 @@ Each lesson lives in its own folder alongside a `README.md`, plus `figures/` and
 
 ## Setup (once)
 
-```bash
-pip install -e ".[notebooks]"   # from the repo root
-```
+Follow the [**Setup**](../README.md#setup) and
+[**First notebook launch**](../README.md#first-notebook-launch) sections in the
+root README. In short: create and activate a `.venv`, then from the repo root
+run `python -m pip install -e ".[notebooks]"`. This installs the `simulated_data`
+package editable, so every notebook can `from simulated_data import uvvis`
+regardless of how deep it sits.
 
-This installs the `simulated_data` package editable, so every notebook can
-`from simulated_data import uvvis` regardless of how deep it sits.
+When you open a notebook, select the `.venv` kernel — and restart the kernel if
+you just installed the package (see
+[Troubleshooting](../README.md#troubleshooting)).
 
 ---
 
