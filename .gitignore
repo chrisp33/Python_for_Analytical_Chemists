@@ -1,0 +1,41 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# --- Editable install / packaging ---
+*.egg-link
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+
+# --- Editors / IDEs ---
+.vscode/
+.idea/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+.jupyter/
+.virtual_documents/
+
+# --- Pytest ---
+.pytest_cache/
+pytest-cache-files-*/
+
+# --- Generated notebook artifacts ---
+# Notebooks regenerate these on run; never commit them.
+exports/
+**/exports/
+
+# --- Datasets ---
+# Large / external data is fetched via scripts/, not committed.
+data/raw/
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db

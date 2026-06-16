@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simulated_data"
+version = "0.1.0"
+description = "Realistic, reproducible synthetic instrument data for the Python for Analytical Chemists series."
+readme = "simulated_data/README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Chris Pulliam" }]
+dependencies = [
+    "numpy",
+    "scipy",
+    "pandas",
+]
+
+# Optional extras: install with `pip install -e ".[notebooks]"` to also get the
+# tools needed to run and develop the curriculum notebooks.
+[project.optional-dependencies]
+notebooks = ["matplotlib", "jupyter", "ipykernel"]
+dev = ["pytest"]
+
+# Flat-layout: the importable package `simulated_data/` lives at the repo root.
+# Limit discovery to it so setuptools doesn't try to package notebooks/, docs/, etc.
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["simulated_data*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
