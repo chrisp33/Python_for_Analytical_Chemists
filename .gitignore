@@ -35,6 +35,10 @@ exports/
 # --- Private content / production notes ---
 media/
 
+# Private planning, content drafts, strategy notes, scripts, thumbnails.
+# Never commit.
+private/
+
 # --- Datasets ---
 # Large / external data is fetched via scripts/, not committed.
 data/raw/
