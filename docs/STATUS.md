@@ -1,6 +1,6 @@
 # Project Status
 
-_Last updated: 2026-06-15_
+_Last updated: 2026-06-16_
 
 A snapshot of what exists today: notebooks drafted, simulator modules built, and
 tests passing. The live lesson index is [`../notebooks/README.md`](../notebooks/README.md).
@@ -13,6 +13,12 @@ tests passing. The live lesson index is [`../notebooks/README.md`](../notebooks/
 
 | ID | Title | Data source |
 |----|-------|-------------|
+| 1.1 | [Why Python Belongs on the Lab Bench](../notebooks/01_foundations/1.1_why_python_on_the_lab_bench/) | inline toy data |
+| 1.2 | [Notebooks, Scripts, and How to Not Lose Your Work](../notebooks/01_foundations/1.2_notebooks_scripts_and_reproducibility/) | inline toy data |
+| 1.3 | [Variables, Numbers, and Units Without Tears](../notebooks/01_foundations/1.3_variables_numbers_and_units/) | inline toy data |
+| 1.4 | [Lists, Arrays, and a First Spectrum](../notebooks/01_foundations/1.4_lists_arrays_and_a_first_spectrum/) | inline toy data |
+| 1.5 | [Loops and Conditionals for Batch Thinking](../notebooks/01_foundations/1.5_loops_and_conditionals_for_batch_thinking/) | inline toy data |
+| 1.6 | [Functions: Writing a Step Once and Reusing It](../notebooks/01_foundations/1.6_functions_write_once_reuse/) | inline toy data |
 | 2.4 | [Reading Real Instrument Files](../notebooks/02_scientific_computing/2.4_reading_instrument_files/) | `uvvis` |
 | 2.5 | [Plotting That Reveals Chemistry](../notebooks/02_scientific_computing/2.5_plotting_that_reveals_chemistry/) | `uvvis` |
 | 3.2 | [Savitzky–Golay Smoothing and Derivatives](../notebooks/03_signal_processing/3.2_savgol_smoothing_derivatives/) | `uvvis` |
@@ -26,8 +32,9 @@ tests passing. The live lesson index is [`../notebooks/README.md`](../notebooks/
 | 6.4 | [PCA II: Diagnostics and Outliers](../notebooks/06_chemometrics/6.4_pca_diagnostics_and_outliers/) | `core` + `artifacts` |
 | 6.5 | [PLS Regression: Quantitative Prediction from Spectra](../notebooks/06_chemometrics/6.5_pls_regression/) | `core` |
 
-12 notebooks drafted. Every notebook runs offline from a fixed seed and grades
-itself against the simulator's ground truth.
+18 notebooks drafted. The Track 2+ notebooks run offline from a fixed seed and grade
+themselves against the simulator's ground truth; the Track 1 onboarding notebooks
+(1.1–1.6) use inline toy data only and do not require the `simulated_data` package.
 
 ---
 
