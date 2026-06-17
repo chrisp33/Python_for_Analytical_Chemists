@@ -19,8 +19,14 @@ tests passing. The live lesson index is [`../notebooks/README.md`](../notebooks/
 | 1.4 | [Lists, Arrays, and a First Spectrum](../notebooks/01_foundations/1.4_lists_arrays_and_a_first_spectrum/) | inline toy data |
 | 1.5 | [Loops and Conditionals for Batch Thinking](../notebooks/01_foundations/1.5_loops_and_conditionals_for_batch_thinking/) | inline toy data |
 | 1.6 | [Functions: Writing a Step Once and Reusing It](../notebooks/01_foundations/1.6_functions_write_once_reuse/) | inline toy data |
+| 2.1 | [NumPy Arrays: Math on Whole Spectra at Once](../notebooks/02_scientific_computing/2.1_numpy_arrays_whole_spectra/) | inline toy data |
+| 2.2 | [Indexing, Slicing, and Selecting Spectral Regions](../notebooks/02_scientific_computing/2.2_indexing_slicing_spectral_regions/) | inline toy data |
+| 2.3 | [pandas DataFrames for Sample Tables](../notebooks/02_scientific_computing/2.3_pandas_dataframes_sample_tables/) | inline toy data |
 | 2.4 | [Reading Real Instrument Files](../notebooks/02_scientific_computing/2.4_reading_instrument_files/) | `uvvis` |
 | 2.5 | [Plotting That Reveals Chemistry](../notebooks/02_scientific_computing/2.5_plotting_that_reveals_chemistry/) | `uvvis` |
+| 2.6 | [Missing Values and Detector Dropouts](../notebooks/02_scientific_computing/2.6_missing_values_and_detector_dropouts/) | inline toy data |
+| 2.7 | [Joining Measurements and Metadata](../notebooks/02_scientific_computing/2.7_joining_measurements_and_metadata/) | inline toy data |
+| 2.8 | [Reshaping Data for Analysis](../notebooks/02_scientific_computing/2.8_reshaping_data_for_analysis/) | inline toy data |
 | 3.2 | [Savitzky–Golay Smoothing and Derivatives](../notebooks/03_signal_processing/3.2_savgol_smoothing_derivatives/) | `uvvis` |
 | 3.3 | [Asymmetric Least Squares (AsLS) Baseline Correction](../notebooks/03_signal_processing/3.3_asls_baseline_correction/) | `uvvis` |
 | 3.4 | [Peak Detection and Picking](../notebooks/03_signal_processing/3.4_peak_detection_and_picking/) | `uvvis` |
@@ -32,9 +38,19 @@ tests passing. The live lesson index is [`../notebooks/README.md`](../notebooks/
 | 6.4 | [PCA II: Diagnostics and Outliers](../notebooks/06_chemometrics/6.4_pca_diagnostics_and_outliers/) | `core` + `artifacts` |
 | 6.5 | [PLS Regression: Quantitative Prediction from Spectra](../notebooks/06_chemometrics/6.5_pls_regression/) | `core` |
 
-18 notebooks drafted. The Track 2+ notebooks run offline from a fixed seed and grade
-themselves against the simulator's ground truth; the Track 1 onboarding notebooks
-(1.1–1.6) use inline toy data only and do not require the `simulated_data` package.
+24 notebooks drafted. The simulator-backed notebooks run offline from a fixed seed and
+grade themselves against the simulator's ground truth; the Track 1 foundations
+(1.1–1.6) and the new Track 2 data-handling notebooks (2.1–2.3, 2.6–2.8) use inline
+toy data only and do not require the `simulated_data` package.
+
+> **Track 2 restructure (2026-06-16).** This sprint added 2.1–2.3 (matching the
+> curriculum) and **redefined the later Track 2 lessons**: 2.6 is now *Missing Values
+> and Detector Dropouts*, 2.7 is *Joining Measurements and Metadata*, and a new **2.8
+> — Reshaping Data for Analysis** carries the reshaping content previously planned
+> under 2.6. The earlier planned **2.7 — Saving Results: Arrays, Tables, and Figures**
+> is **not yet scheduled** under a new ID. `docs/curriculum.md` still describes the old
+> 2.6/2.7 and has no 2.8 — it needs a human pass to match this structure, and the
+> existing 2.5 notebook's "Next Lesson" still points to the old 2.6 title.
 
 ---
 
