@@ -28,12 +28,12 @@ you just installed the package (see
 ## Track 1 — Foundations
 | ID | Title | Status |
 |----|-------|--------|
-| 1.1 | Why Python Belongs on the Lab Bench | ⬜ |
-| 1.2 | Notebooks, Scripts, and How to Not Lose Your Work | ⬜ |
-| 1.3 | Variables, Numbers, and Units Without Tears | ⬜ |
-| 1.4 | Lists, Arrays, and a First Spectrum | ⬜ |
-| 1.5 | Loops and Conditionals for Batch Thinking | ⬜ |
-| 1.6 | Functions: Writing a Step Once and Reusing It | ⬜ |
+| 1.1 | [Why Python Belongs on the Lab Bench](01_foundations/1.1_why_python_on_the_lab_bench/) | 🟡 |
+| 1.2 | [Notebooks, Scripts, and How to Not Lose Your Work](01_foundations/1.2_notebooks_scripts_and_reproducibility/) | 🟡 |
+| 1.3 | [Variables, Numbers, and Units Without Tears](01_foundations/1.3_variables_numbers_and_units/) | 🟡 |
+| 1.4 | [Lists, Arrays, and a First Spectrum](01_foundations/1.4_lists_arrays_and_a_first_spectrum/) | 🟡 |
+| 1.5 | [Loops and Conditionals for Batch Thinking](01_foundations/1.5_loops_and_conditionals_for_batch_thinking/) | 🟡 |
+| 1.6 | [Functions: Writing a Step Once and Reusing It](01_foundations/1.6_functions_write_once_reuse/) | 🟡 |
 
 ## Track 2 — Scientific Computing
 | ID | Title | Status |
