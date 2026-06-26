@@ -3,6 +3,14 @@
 **Title:** *Getting Your Instrument Data Into Python (Without Losing Your Mind)*
 **Track:** 2 — Scientific Computing · **Difficulty:** Intermediate · **Length:** 16–18 min · **Type:** Foundation
 
+## Video
+
+**Your CSV Imported Fine. That's the Problem.**
+
+https://youtu.be/grI2bnXnfAQ
+
+This video explains why a file can load successfully but still be parsed incorrectly, and why reading instrument exports correctly is part of the measurement.
+
 ## Learning objective
 
 Import exported spectra and chromatograms reliably: skip metadata headers, parse
@@ -55,4 +63,4 @@ external datasets.
 
 - Curriculum: [`docs/curriculum.md`](../../../docs/curriculum.md) → 2.4
 - Follow-up: 2.5 — Plotting That Reveals Chemistry
-- YouTube: _(add link when published)_
+- YouTube: https://youtu.be/grI2bnXnfAQ

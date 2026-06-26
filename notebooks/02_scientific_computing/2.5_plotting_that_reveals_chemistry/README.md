@@ -3,6 +3,14 @@
 **Title:** *Spectral Plots That Actually Show the Chemistry*
 **Track:** 2 — Scientific Computing · **Difficulty:** Intermediate · **Length:** 15–18 min · **Type:** Foundation
 
+## Video
+
+**Same Data, Different Chemistry: Plots That Reveal (or Hide) Your Results**
+
+Status: Scheduled
+
+https://youtu.be/yMSNV9NwwCk
+
 ## Learning objective
 
 Move beyond the default `matplotlib` plot and build figures that communicate
@@ -71,4 +79,4 @@ and three "batches" (`seed=11/12/13`) where one carries a contaminant band near
 - Curriculum: [`docs/curriculum.md`](../../../docs/curriculum.md) → 2.5
 - Previous: 2.4 — Reading Real Instrument Files
 - Follow-up: 2.6 — Tidy Data and Reshaping Spectral Matrices
-- YouTube: _(add link when published)_
+- YouTube: https://youtu.be/yMSNV9NwwCk (scheduled)

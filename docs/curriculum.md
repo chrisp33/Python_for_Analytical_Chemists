@@ -87,6 +87,7 @@ This track gives you the numerical and data-handling tools that everything after
 - **Prerequisites:** 2.3.
 - **Difficulty:** Intermediate.
 - **Length:** 16–18 min.
+- **Video:** https://youtu.be/grI2bnXnfAQ
 
 ### 2.5 — Plotting That Reveals Chemistry
 - **Objective:** Build labeled spectral plots, overlays, and shaded regions you'd put in a paper.
@@ -94,6 +95,7 @@ This track gives you the numerical and data-handling tools that everything after
 - **Prerequisites:** 2.2, 2.3.
 - **Difficulty:** Intermediate.
 - **Length:** 15–18 min.
+- **Video:** https://youtu.be/yMSNV9NwwCk
 
 ### 2.6 — Tidy Data and Reshaping Spectral Matrices
 - **Objective:** Move between long and wide formats and assemble a samples-by-variables matrix.
@@ -115,9 +117,14 @@ This track gives you the numerical and data-handling tools that everything after
 
 This is the preprocessing that decides whether any downstream model works at all. Taught generally here, then specialized per technique in later tracks.
 
-### 3.1 — Noise, Signal, and What Smoothing Really Does
-- **Objective:** Apply a moving average and understand the trade-off between noise and resolution.
-- **Scientific motivation:** Every smoothing choice trades signal-to-noise against peak distortion. Knowing the trade-off keeps you from smoothing away real features.
+> **Built sequence note (2026-06-16).** Track 3 was reorganized during the build
+> sprints from its original plan. Signal Averaging (the √N rule) was added as a moat
+> lesson at 3.6, and the section now runs 3.1 → 3.7 with Peak Fitting moved to 3.8
+> (planned). The numbering below reflects what is actually built.
+
+### 3.1 — Noise, Signal, and Why Preprocessing Exists
+- **Objective:** Name the nuisance components in a raw spectrum (noise, baseline, drift, artifacts), tell signal from nuisance, and understand the moving-average noise/resolution trade-off — framed as why preprocessing exists at all.
+- **Scientific motivation:** A raw measurement is signal + nuisance. Preprocessing is the scientific judgment of separating them — reveal real chemistry or fabricate it. Every later Track 3 step exists because of this.
 - **Prerequisites:** 2.2.
 - **Difficulty:** Intermediate.
 - **Length:** 14–16 min.
@@ -129,8 +136,8 @@ This is the preprocessing that decides whether any downstream model works at all
 - **Difficulty:** Intermediate.
 - **Length:** 16–18 min.
 
-### 3.3 — Baseline Correction Fundamentals
-- **Objective:** Remove a sloping or curved baseline with polynomial and asymmetric least-squares methods.
+### 3.3 — Baseline Correction Fundamentals (AsLS)
+- **Objective:** Remove a sloping or curved baseline with polynomial and asymmetric least-squares (AsLS) methods.
 - **Scientific motivation:** Baseline drift biases peak area and ruins quantitation. Correct it wrong and you bias the result; correct it well and quantitation becomes honest.
 - **Prerequisites:** 3.2.
 - **Difficulty:** Intermediate.
@@ -150,19 +157,26 @@ This is the preprocessing that decides whether any downstream model works at all
 - **Difficulty:** Intermediate.
 - **Length:** 16–18 min.
 
-### 3.6 — Peak Fitting with Gaussians, Lorentzians, and Voigt
+### 3.6 — Signal Averaging and the √N Rule: When More Scans Help and When They Don't
+- **Objective:** Measure the √N signal-to-noise improvement under ideal white noise, and see it break under drift, correlated noise, or a changing sample.
+- **Scientific motivation:** Co-adding scans is the most common SNR move in spectroscopy and MS, and it silently fails when noise isn't white or the sample isn't stable. Knowing when √N holds — and when more scans mislead — is measurement judgment, not code.
+- **Prerequisites:** 3.1.
+- **Difficulty:** Intermediate.
+- **Length:** 16–18 min.
+
+### 3.7 — Frequency Domain: A Practical Look at the FFT
+- **Objective:** Read a signal in the time and frequency domains, use the FFT to find periodic interference, and avoid aliasing and spectral leakage.
+- **Scientific motivation:** Mains hum, pump pulsation, instrument oscillation, and daily sensor rhythms show up as sharp, locatable frequency peaks — and a peak can lie if you undersample or skip windowing.
+- **Prerequisites:** 3.1.
+- **Difficulty:** Intermediate.
+- **Length:** 16–18 min.
+
+### 3.8 — Peak Fitting with Gaussians, Lorentzians, and Voigt *(planned)*
 - **Objective:** Fit single and overlapping peaks to a model and extract position, width, and area.
 - **Scientific motivation:** Overlapping bands can't be integrated by eye. Fitting a physical line shape separates them and gives uncertainty on each parameter.
 - **Prerequisites:** 3.5.
 - **Difficulty:** Advanced.
 - **Length:** 20–24 min.
-
-### 3.7 — Frequency Domain: A Practical Look at the FFT
-- **Objective:** Use the FFT to identify periodic noise and filter it out.
-- **Scientific motivation:** Mains hum, detector ripple, and mechanical vibration show up as sharp frequencies you can remove without touching your peaks.
-- **Prerequisites:** 3.1.
-- **Difficulty:** Advanced.
-- **Length:** 18–20 min.
 
 ---
 

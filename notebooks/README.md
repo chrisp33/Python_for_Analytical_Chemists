@@ -50,13 +50,14 @@ you just installed the package (see
 ## Track 3 — Signal Processing
 | ID | Title | Status |
 |----|-------|--------|
-| 3.1 | Noise, Signal, and What Smoothing Really Does | ⬜ |
+| 3.1 | [Noise, Signal, and Why Preprocessing Exists](03_signal_processing/3.1_noise_signal_and_preprocessing/) | 🟡 |
 | 3.2 | [Savitzky–Golay Smoothing and Derivatives](03_signal_processing/3.2_savgol_smoothing_derivatives/) | 🟡 |
 | 3.3 | [Asymmetric Least Squares (AsLS) Baseline Correction](03_signal_processing/3.3_asls_baseline_correction/) | 🟡 |
 | 3.4 | [Peak Detection and Picking](03_signal_processing/3.4_peak_detection_and_picking/) | 🟡 |
 | 3.5 | [Peak Integration and Quantifying Area](03_signal_processing/3.5_peak_integration_and_quantitation/) | 🟡 |
-| 3.6 | Peak Fitting with Gaussians, Lorentzians, and Voigt | ⬜ |
-| 3.7 | Frequency Domain: A Practical Look at the FFT | ⬜ |
+| 3.6 | [Signal Averaging and the √N Rule: When More Scans Help and When They Don't](03_signal_processing/3.6_signal_averaging_sqrt_n_rule/) | 🟡 |
+| 3.7 | [Frequency Domain: A Practical Look at the FFT](03_signal_processing/3.7_frequency_domain_fft/) | 🟡 |
+| 3.8 | Peak Fitting with Gaussians, Lorentzians, and Voigt | ⬜ |
 
 ## Track 4 — Spectroscopy
 | ID | Title | Status |

@@ -27,10 +27,13 @@ tests passing. The live lesson index is [`../notebooks/README.md`](../notebooks/
 | 2.6 | [Missing Values and Detector Dropouts](../notebooks/02_scientific_computing/2.6_missing_values_and_detector_dropouts/) | inline toy data |
 | 2.7 | [Joining Measurements and Metadata](../notebooks/02_scientific_computing/2.7_joining_measurements_and_metadata/) | inline toy data |
 | 2.8 | [Reshaping Data for Analysis](../notebooks/02_scientific_computing/2.8_reshaping_data_for_analysis/) | inline toy data |
+| 3.1 | [Noise, Signal, and Why Preprocessing Exists](../notebooks/03_signal_processing/3.1_noise_signal_and_preprocessing/) | inline toy data |
 | 3.2 | [Savitzky–Golay Smoothing and Derivatives](../notebooks/03_signal_processing/3.2_savgol_smoothing_derivatives/) | `uvvis` |
 | 3.3 | [Asymmetric Least Squares (AsLS) Baseline Correction](../notebooks/03_signal_processing/3.3_asls_baseline_correction/) | `uvvis` |
 | 3.4 | [Peak Detection and Picking](../notebooks/03_signal_processing/3.4_peak_detection_and_picking/) | `uvvis` |
 | 3.5 | [Peak Integration and Quantifying Area](../notebooks/03_signal_processing/3.5_peak_integration_and_quantitation/) | `uvvis` |
+| 3.6 | [Signal Averaging and the √N Rule](../notebooks/03_signal_processing/3.6_signal_averaging_sqrt_n_rule/) | inline toy data |
+| 3.7 | [Frequency Domain: A Practical Look at the FFT](../notebooks/03_signal_processing/3.7_frequency_domain_fft/) | inline toy data |
 | 4.2 | [UV–Vis: Building Your First Calibration Curve](../notebooks/04_spectroscopy/4.2_calibration_curve_with_lod_loq/) | `uvvis` |
 | 4.3 | [NIR Preprocessing: SNV, MSC, and Scatter Correction](../notebooks/04_spectroscopy/4.3_nir_snv_msc_scatter_correction/) | `nir` |
 | 4.5 | [Raman: Cosmic Ray Removal and Fluorescence Baselines](../notebooks/04_spectroscopy/4.5_raman_cosmic_ray_fluorescence/) | `raman` |
@@ -38,10 +41,26 @@ tests passing. The live lesson index is [`../notebooks/README.md`](../notebooks/
 | 6.4 | [PCA II: Diagnostics and Outliers](../notebooks/06_chemometrics/6.4_pca_diagnostics_and_outliers/) | `core` + `artifacts` |
 | 6.5 | [PLS Regression: Quantitative Prediction from Spectra](../notebooks/06_chemometrics/6.5_pls_regression/) | `core` |
 
-24 notebooks drafted. The simulator-backed notebooks run offline from a fixed seed and
+27 notebooks drafted. The simulator-backed notebooks run offline from a fixed seed and
 grade themselves against the simulator's ground truth; the Track 1 foundations
-(1.1–1.6) and the new Track 2 data-handling notebooks (2.1–2.3, 2.6–2.8) use inline
-toy data only and do not require the `simulated_data` package.
+(1.1–1.6), the Track 2 data-handling notebooks (2.1–2.3, 2.6–2.8), and the new Track 3
+notebooks (3.1, 3.6, 3.7) use inline generated data only and do not require the
+`simulated_data` package.
+
+> **Track 3 additions (2026-06-16).** Added **3.1 — Noise, Signal, and Why
+> Preprocessing Exists** (the Track 3 opener; broadens curriculum.md's smoothing-only
+> 3.1 into a "why preprocessing exists" overview, while still demonstrating the
+> moving-average noise/resolution trade-off), a moat lesson **3.6 — Signal Averaging
+> and the √N Rule** (not in `docs/curriculum.md`), and **3.7 — Frequency Domain: A
+> Practical Look at the FFT**. Current Track 3 index order: 3.1 → 3.6 (√N) → 3.7 (FFT),
+> with **Peak Fitting now planned at 3.8**. Human follow-ups:
+> (1) `docs/curriculum.md` still shows the original Track 3 numbering (Peak Fitting 3.6,
+> FFT 3.7, no Signal Averaging) — reconcile it to this order.
+> (2) Two existing notebooks have **stale "Next Lesson" links** (left untouched to avoid
+> rewriting completed notebooks): **3.5** points to "3.6 — Peak Fitting" (now Signal
+> Averaging), and **3.6** points to "3.7 — Peak Fitting" (now FFT).
+> (3) The core Track 3 signal-processing arc (3.1–3.7) is now complete; only the
+> advanced **Peak Fitting (3.8)** remains planned.
 
 > **Track 2 restructure (2026-06-16).** This sprint added 2.1–2.3 (matching the
 > curriculum) and **redefined the later Track 2 lessons**: 2.6 is now *Missing Values
