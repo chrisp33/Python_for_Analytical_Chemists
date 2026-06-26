@@ -44,7 +44,7 @@ typed into the notebook. No external datasets and no `simulated_data` package re
 
 - Curriculum: [`docs/curriculum.md`](../../../docs/curriculum.md) → 2.6
 - Follow-up: 2.7 — Joining Measurements and Metadata
-- YouTube: _(add link when published)_
+- YouTube: https://youtu.be/qgoFJGtNAto
 
 > **Note for maintainers:** this lesson's topic (Missing Values and Detector
 > Dropouts) supersedes the older curriculum placeholder for 2.6 ("Tidy Data and

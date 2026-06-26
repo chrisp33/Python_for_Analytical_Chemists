@@ -87,6 +87,7 @@ This track gives you the numerical and data-handling tools that everything after
 - **Prerequisites:** 2.3.
 - **Difficulty:** Intermediate.
 - **Length:** 16–18 min.
+- **Video:** https://youtu.be/grI2bnXnfAQ
 
 ### 2.5 — Plotting That Reveals Chemistry
 - **Objective:** Build labeled spectral plots, overlays, and shaded regions you'd put in a paper.
@@ -94,6 +95,7 @@ This track gives you the numerical and data-handling tools that everything after
 - **Prerequisites:** 2.2, 2.3.
 - **Difficulty:** Intermediate.
 - **Length:** 15–18 min.
+- **Video:** https://youtu.be/yMSNV9NwwCk
 
 ### 2.6 — Tidy Data and Reshaping Spectral Matrices
 - **Objective:** Move between long and wide formats and assemble a samples-by-variables matrix.
