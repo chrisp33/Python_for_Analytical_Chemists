@@ -41,10 +41,10 @@ you just installed the package (see
 | 2.1 | [NumPy Arrays: Math on Whole Spectra at Once](02_scientific_computing/2.1_numpy_arrays_whole_spectra/) | 🟡 |
 | 2.2 | [Indexing, Slicing, and Selecting Spectral Regions](02_scientific_computing/2.2_indexing_slicing_spectral_regions/) | 🟡 |
 | 2.3 | [pandas DataFrames for Sample Tables](02_scientific_computing/2.3_pandas_dataframes_sample_tables/) | 🟡 |
-| 2.4 | [Reading Real Instrument Files (CSV, TXT, and the Messy Ones)](02_scientific_computing/2.4_reading_instrument_files/) | 🟡 |
-| 2.5 | [Plotting That Reveals Chemistry](02_scientific_computing/2.5_plotting_that_reveals_chemistry/) | 🟡 |
-| 2.6 | [Missing Values and Detector Dropouts](02_scientific_computing/2.6_missing_values_and_detector_dropouts/) | 🟡 |
-| 2.7 | [Joining Measurements and Metadata](02_scientific_computing/2.7_joining_measurements_and_metadata/) | 🟡 |
+| 2.4 | [Reading Real Instrument Files (CSV, TXT, and the Messy Ones)](02_scientific_computing/2.4_reading_instrument_files/) | ✅ |
+| 2.5 | [Plotting That Reveals Chemistry](02_scientific_computing/2.5_plotting_that_reveals_chemistry/) | ✅ |
+| 2.6 | [Missing Values and Detector Dropouts](02_scientific_computing/2.6_missing_values_and_detector_dropouts/) | ✅ |
+| 2.7 | [Joining Measurements and Metadata](02_scientific_computing/2.7_joining_measurements_and_metadata/) | ✅ |
 | 2.8 | [Reshaping Data for Analysis](02_scientific_computing/2.8_reshaping_data_for_analysis/) | 🟡 |
 
 ## Track 3 — Signal Processing

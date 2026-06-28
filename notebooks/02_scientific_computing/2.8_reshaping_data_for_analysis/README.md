@@ -41,9 +41,6 @@ external datasets and no `simulated_data` package required.
 ## Links
 
 - Curriculum: [`docs/curriculum.md`](../../../docs/curriculum.md) → 2.8
+- Previous: 2.7 — Joining Measurements and Metadata
 - Follow-up: 3.1 — Noise, Signal, and What Smoothing Really Does (Track 3)
 - YouTube: _(add link when published)_
-
-> **Note for maintainers:** 2.8 is a new lesson ID not yet in `docs/curriculum.md`;
-> it carries the reshaping content previously planned under 2.6 ("Tidy Data and
-> Reshaping Spectral Matrices"). See `docs/STATUS.md`.

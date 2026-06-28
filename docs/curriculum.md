@@ -97,19 +97,28 @@ This track gives you the numerical and data-handling tools that everything after
 - **Length:** 15–18 min.
 - **Video:** https://youtu.be/yMSNV9NwwCk
 
-### 2.6 — Tidy Data and Reshaping Spectral Matrices
-- **Objective:** Move between long and wide formats and assemble a samples-by-variables matrix.
-- **Scientific motivation:** Chemometric tools expect a clean matrix: one row per sample, one column per wavelength. Getting there is half the battle.
-- **Prerequisites:** 2.4.
+### 2.6 — Missing Values and Detector Dropouts
+- **Objective:** Find and count missing values, distinguish a dropout from a saturation from a dead channel, and choose drop vs interpolate vs flag with the consequences in mind.
+- **Scientific motivation:** A `NaN` is not a nuisance to silence — it records that the instrument did not return a trustworthy value. Drop, interpolate, and flag each change the result differently, so the choice is a scientific one.
+- **Prerequisites:** 2.3.
 - **Difficulty:** Intermediate.
 - **Length:** 14–16 min.
+- **Video:** https://youtu.be/qgoFJGtNAto
 
-### 2.7 — Saving Results: Arrays, Tables, and Figures
-- **Objective:** Persist processed data and figures in formats colleagues can open.
-- **Scientific motivation:** An analysis nobody can reopen is worthless. Reproducible output is the close of every workflow.
-- **Prerequisites:** 2.5, 2.6.
-- **Difficulty:** Beginner.
-- **Length:** 10–12 min.
+### 2.7 — Joining Measurements and Metadata
+- **Objective:** Merge measurements with sample metadata on a shared ID, choose inner vs left joins, and catch the failures a join exposes — missing metadata and duplicate IDs.
+- **Scientific motivation:** Instrument output and sample metadata almost always live in different files. Joining them correctly is routine — and it is exactly where mismatches surface: a sample with no metadata, or a duplicate ID that silently multiplies rows.
+- **Prerequisites:** 2.3, 2.6.
+- **Difficulty:** Intermediate.
+- **Length:** 14–16 min.
+- **Video:** https://youtu.be/eP3blks5Yeg
+
+### 2.8 — Reshaping Data for Analysis
+- **Objective:** Move between long and wide layouts and assemble a samples-by-wavelengths matrix: pivot long → wide, melt wide → long, and hand a clean numeric matrix to a model.
+- **Scientific motivation:** Chemometric and machine-learning tools expect a clean matrix: one row per sample, one column per wavelength. Data often arrives long, so reshaping it into that matrix is half the battle before any modelling.
+- **Prerequisites:** 2.3, 2.7.
+- **Difficulty:** Intermediate.
+- **Length:** 14–16 min.
 
 ---
 
@@ -189,7 +198,7 @@ Now the general tools meet specific techniques. Each lesson uses the preprocessi
 ### 4.3 — NIR Preprocessing: SNV, MSC, and Scatter Correction
 - **Objective:** Apply standard normal variate and multiplicative scatter correction and see why NIR needs them.
 - **Scientific motivation:** NIR spectra are dominated by physical scatter from particle size and packing. Removing it is the difference between a model that transfers and one that doesn't.
-- **Prerequisites:** 3.2, 2.6.
+- **Prerequisites:** 3.2, 2.8.
 - **Difficulty:** Intermediate.
 - **Length:** 18–20 min.
 
@@ -272,7 +281,7 @@ MS has its own data structures and scale. This track treats spectra and chromato
 ### 5.7 — Aligning and Comparing Many Runs
 - **Objective:** Correct retention-time drift and align features across a sample set.
 - **Scientific motivation:** Untargeted comparison requires that the same feature line up across runs; alignment is what makes a feature table meaningful.
-- **Prerequisites:** 5.3, 2.6.
+- **Prerequisites:** 5.3, 2.8.
 - **Difficulty:** Advanced.
 - **Length:** 20–24 min.
 
@@ -285,7 +294,7 @@ Multivariate methods explained so the math maps to chemistry. This track turns t
 ### 6.1 — Why Multivariate? The Limits of One Wavelength
 - **Objective:** Show how using a full spectrum beats single-wavelength analysis.
 - **Scientific motivation:** Real samples have overlapping, interfering signals; multivariate methods use the whole spectrum to separate what one channel can't.
-- **Prerequisites:** 2.6, 4.7.
+- **Prerequisites:** 2.8, 4.7.
 - **Difficulty:** Intermediate.
 - **Length:** 14–16 min.
 
@@ -443,7 +452,7 @@ Tying everything together into reproducible, shareable, automatable pipelines �
 ### 9.3 — Automated Reporting and Figures
 - **Objective:** Generate a formatted report with results, plots, and pass/fail flags automatically.
 - **Scientific motivation:** Consistent, auto-generated reports save hours and remove the formatting errors that creep into manual ones.
-- **Prerequisites:** 9.2, 2.7.
+- **Prerequisites:** 9.2, 2.5.
 - **Difficulty:** Intermediate.
 - **Length:** 16–18 min.
 

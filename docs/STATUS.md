@@ -1,6 +1,6 @@
 # Project Status
 
-_Last updated: 2026-06-16_
+_Last updated: 2026-06-27_
 
 A snapshot of what exists today: notebooks drafted, simulator modules built, and
 tests passing. The live lesson index is [`../notebooks/README.md`](../notebooks/README.md).
@@ -43,14 +43,17 @@ grade themselves against the simulator's ground truth; the Track 1 foundations
 (1.1–1.6) and the new Track 2 data-handling notebooks (2.1–2.3, 2.6–2.8) use inline
 toy data only and do not require the `simulated_data` package.
 
-> **Track 2 restructure (2026-06-16).** This sprint added 2.1–2.3 (matching the
-> curriculum) and **redefined the later Track 2 lessons**: 2.6 is now *Missing Values
-> and Detector Dropouts*, 2.7 is *Joining Measurements and Metadata*, and a new **2.8
-> — Reshaping Data for Analysis** carries the reshaping content previously planned
-> under 2.6. The earlier planned **2.7 — Saving Results: Arrays, Tables, and Figures**
-> is **not yet scheduled** under a new ID. `docs/curriculum.md` still describes the old
-> 2.6/2.7 and has no 2.8 — it needs a human pass to match this structure, and the
-> existing 2.5 notebook's "Next Lesson" still points to the old 2.6 title.
+> **Track 2 restructure (reconciled 2026-06-27).** The later Track 2 lessons were
+> redefined: 2.6 is *Missing Values and Detector Dropouts*, 2.7 is *Joining
+> Measurements and Metadata*, and **2.8 — Reshaping Data for Analysis** carries the
+> reshaping content previously planned under 2.6. `docs/curriculum.md` has now been
+> updated to match — 2.6/2.7 retitled, 2.8 added, and downstream prerequisites that
+> pointed at the old reshaping lesson renumbered (2.6 → 2.8) — and the 2.5 notebook's
+> "Next Lesson" now points to the current 2.6. The earlier planned **2.7 — Saving
+> Results: Arrays, Tables, and Figures** remains **unscheduled** under a new ID.
+>
+> **Published to YouTube:** 2.4, 2.5, 2.6, and 2.7 are filmed and live. Links live in
+> each lesson's README and in [`../notebooks/README.md`](../notebooks/README.md) (✅).
 
 ---
 

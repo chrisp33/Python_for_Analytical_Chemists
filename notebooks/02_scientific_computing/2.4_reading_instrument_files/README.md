@@ -55,4 +55,4 @@ external datasets.
 
 - Curriculum: [`docs/curriculum.md`](../../../docs/curriculum.md) → 2.4
 - Follow-up: 2.5 — Plotting That Reveals Chemistry
-- YouTube: _(add link when published)_
+- YouTube: https://youtu.be/grI2bnXnfAQ

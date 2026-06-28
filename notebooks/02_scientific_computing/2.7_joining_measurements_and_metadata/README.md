@@ -43,9 +43,6 @@ mismatches and a duplicate ID, typed into the notebook. No external datasets and
 ## Links
 
 - Curriculum: [`docs/curriculum.md`](../../../docs/curriculum.md) → 2.7
+- Previous: 2.6 — Missing Values and Detector Dropouts
 - Follow-up: 2.8 — Reshaping Data for Analysis
-- YouTube: _(add link when published)_
-
-> **Note for maintainers:** this lesson's topic (Joining Measurements and Metadata)
-> supersedes the older curriculum placeholder for 2.7 ("Saving Results: Arrays,
-> Tables, and Figures"), which is not part of this sprint. See `docs/STATUS.md`.
+- YouTube: https://youtu.be/eP3blks5Yeg

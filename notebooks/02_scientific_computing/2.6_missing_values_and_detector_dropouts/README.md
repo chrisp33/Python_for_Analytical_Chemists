@@ -43,9 +43,6 @@ typed into the notebook. No external datasets and no `simulated_data` package re
 ## Links
 
 - Curriculum: [`docs/curriculum.md`](../../../docs/curriculum.md) → 2.6
+- Previous: 2.5 — Plotting That Reveals Chemistry
 - Follow-up: 2.7 — Joining Measurements and Metadata
 - YouTube: https://youtu.be/qgoFJGtNAto
-
-> **Note for maintainers:** this lesson's topic (Missing Values and Detector
-> Dropouts) supersedes the older curriculum placeholder for 2.6 ("Tidy Data and
-> Reshaping Spectral Matrices"); reshaping now lives in 2.8. See `docs/STATUS.md`.
